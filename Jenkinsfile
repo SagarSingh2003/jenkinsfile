@@ -6,8 +6,7 @@ pipeline {
       steps {
         sh 'echo hello world this is '
         // Capture user input for filename (properly indented)
-        echo "File '${fileName}' exists: ${fileExists(input message: 'Enter file name', parameters: [string(description: 'user giving input for the filename', name: 'fileName', trim: true)]
-)}"
+        echo  ' Hello world !!!!! node:20 '
       }
     }
     stage('test') {
@@ -15,8 +14,7 @@ pipeline {
       steps {
         sh 'echo hello world this is '
         // Capture user input for filename (properly indented)
-        echo "File '${fileName}' exists: ${fileExists(input message: 'Enter file name', parameters: [string(description: 'user giving input for the filename', name: 'fileName', trim: true)]
-)}"
+        echo "Hello World 2 "
       }
     }
 
