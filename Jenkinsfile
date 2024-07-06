@@ -5,7 +5,7 @@ pipeline {
         stage('build') {
             steps {
                 sh 'echo hello world this is '
-               fileExists './README.md'
+               fileExists 'README.md'
             }
         }
     }
