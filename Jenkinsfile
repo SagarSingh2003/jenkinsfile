@@ -5,7 +5,7 @@ pipeline {
         stage('build') {
             steps {
                 sh 'echo hello world this is '
-               fileExists '/home/sagar/Desktop/ansible-quickstart/sagar-password.pem'
+               fileExists '/home/sagar/Desktop/ansible-quickdfsdfsdfsdfs/sdffjksdlfsdklfs.sdfdfd'
             }
         }
     }
