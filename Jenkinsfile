@@ -5,7 +5,7 @@ pipeline {
         stage('build') {
             steps {
                 sh 'echo hello world this is '
-                echo "File 'output.txt' exists: ${fileExists('outputssss.txt')}"
+                echo "File 'output.txt' exists: ${fileExists('output.txt')}"
             }
         }
     }
