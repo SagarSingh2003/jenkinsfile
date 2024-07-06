@@ -5,7 +5,8 @@ pipeline {
         stage('build') {
             steps {
                 sh 'echo hello world this is '
-                echo "File 'output.txt' exists: ${fileExists('output.txt')}"
+                input message: 'Enter file name', parameters: [string(description: 'user giving input for the filename', name: 'fileName', trim: true)], submitterParameter: 'filename'
+                echo "File 'output.txt' exists: ${fileExists(filename)}"
             }
         }
     }
