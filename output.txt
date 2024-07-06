@@ -1,0 +1,10 @@
+Node {
+  data: 2,
+  next: Node { data: 3, next: Node { data: 4, next: [Node] } }
+}
+Node {
+  data: 3,
+  next: Node { data: 4, next: Node { data: 5, next: null } }
+}
+Node { data: 4, next: Node { data: 5, next: null } }
+3
