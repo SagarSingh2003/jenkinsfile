@@ -5,7 +5,8 @@ pipeline {
         stage('build') {
             steps {
                 sh 'echo hello world this is '
-               fileExists '/output.txt'
+                def fileExistsResult = fileExists 'output.txt'
+                echo "File 'output.txt' exists: ${fileExistsResult}"
             }
         }
     }
