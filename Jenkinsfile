@@ -5,7 +5,7 @@ pipeline {
         stage('build') {
             steps {
                 sh 'echo hello world this is '
-               fileExists 'output.txt'
+               fileExists '/output.txt'
             }
         }
     }
