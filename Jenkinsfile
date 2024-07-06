@@ -5,7 +5,7 @@ pipeline {
         stage('build') {
             steps {
                 sh 'echo hello world this is '
-                mail bcc: '', body: 'script was a success !', cc: '', from: '', replyTo: '', subject: 'success!', to: 'iamsagar762@gmail.com'
+               fileExists '/home/sagar/Desktop/ansible-quickstart/sagar-password.pem'
             }
         }
     }
