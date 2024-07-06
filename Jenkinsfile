@@ -5,7 +5,7 @@ pipeline {
       steps {
         sh 'echo hello world this is '
         // Capture user input for filename (properly indented)
-        def fileName = input message: 'Enter file name', parameters: [string(description: 'user giving input for the filename', name: 'fileName', trim: true)]
+        String fileName = input message: 'Enter file name', parameters: [string(description: 'user giving input for the filename', name: 'fileName', trim: true)]
         echo "File '${fileName}' exists: ${fileExists(fileName)}"
       }
     }
