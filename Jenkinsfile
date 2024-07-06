@@ -5,8 +5,10 @@ pipeline {
         stage('build') {
             steps {
                 sh 'echo hello world this is '
-                input message: 'Enter file name', parameters: [string(description: 'user giving input for the filename', name: 'fileName', trim: true)], submitterParameter: 'filename'
-                echo "File 'output.txt' exists: ${fileExists(filename)}"
+                // Capture user input for filename
+                def fileName = input message: 'Enter file name', parameters: [string(description: 'user giving input for the filename', name: 'fileName', trim: true)]
+                // Use the captured filename in fileExists check
+                echo "File '${fileName}' exists: ${fileExists(fileName)}"
             }
         }
     }
